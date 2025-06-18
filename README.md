@@ -6,11 +6,6 @@ This micro-benchmark measures the latency difference between
 2. **Page-table relocation** with `mremap` (moving the same physical pages to a
    new virtual address—zero data copied).
 
-It answers the question:
-
-> *“If I double a large vector by letting the kernel move PTEs instead of
-> copying bytes, how much time do I save?”*
-
 ---
 
 ## Files
