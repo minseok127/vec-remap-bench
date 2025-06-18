@@ -12,7 +12,7 @@ This micro-benchmark measures the latency difference between
 
 | File | Purpose |
 | ---- | ------- |
-| `bench_pte_vs_memcpy_en.c` | C source of the benchmark |
+| `src/benchmark.c` | C source of the benchmark |
 | `result.csv` | Generated after a run; raw timings |
 
 `result.csv` columns:
