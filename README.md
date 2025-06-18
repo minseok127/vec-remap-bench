@@ -51,3 +51,40 @@ Fairness safeguards:
 ```bash
 gcc -O2 -Wall -std=c11 bench_pte_vs_memcpy_en.c -o bench
 ./bench          # writes result.csv
+```
+
+---
+
+## Environment
+
+- Hardware
+	- CPU: Intel Core i5-13400F (16 cores)
+	- RAM: 16GB DDR5 5600MHz
+
+- Software
+	- OS: Ubuntu 24.04.1 LTS
+	- Compiler: GCC 13.3.0
+	- Build System: GNU Make 4.3
+
+ ---
+
+ ## Result
+
+|      Size | memcpy median (ns) | mremap median (ns) | Speed-up × (memcpy / mremap) |
+| --------: | -----------------: | -----------------: | ---------------------------: |
+|   4.0 KiB |                 73 |              2 111 |                         0.03 |
+|   8.0 KiB |                 89 |              2 111 |                         0.04 |
+|  16.0 KiB |                205 |              2 539 |                         0.08 |
+|  32.0 KiB |                980 |              3 239 |                         0.30 |
+|  64.0 KiB |              1 911 |              4 479 |                         0.43 |
+| 128.0 KiB |              3 707 |              6 759 |                         0.55 |
+| 256.0 KiB |              5 967 |              1 474 |                         4.05 |
+| 512.0 KiB |             10 626 |              1 810 |                         5.87 |
+|   1.0 MiB |             36 476 |              3 486 |                        10.46 |
+|   2.0 MiB |             77 747 |              7 084 |                        10.98 |
+|   4.0 MiB |            154 627 |              5 821 |                        26.56 |
+|   8.0 MiB |            364 247 |              6 944 |                        52.45 |
+|  16.0 MiB |            880 624 |              9 899 |                        88.96 |
+|  32.0 MiB |          2 505 903 |             12 209 |                       205.25 |
+|  64.0 MiB |          5 151 014 |             15 932 |                       323.31 |
+| 128.0 MiB |          8 885 021 |             17 815 |                       498.74 |
