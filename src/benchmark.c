@@ -8,7 +8,7 @@
 static long timediff_ns(struct timespec a, struct timespec b)
 {
 	return (b.tv_sec - a.tv_sec) * 1000000000L +
-	(b.tv_nsec - a.tv_nsec);
+		(b.tv_nsec - a.tv_nsec);
 }
 
 static void bench_memcpy(size_t size, FILE *out)
