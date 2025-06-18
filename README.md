@@ -3,8 +3,7 @@
 This micro-benchmark measures the latency difference between
 
 1. **Memory copying** with `memcpy`, and  
-2. **Page-table relocation** with `mremap` (moving the same physical pages to a
-   new virtual address—zero data copied).
+2. **Page-table relocation** with `mremap`.
 
 ---
 
