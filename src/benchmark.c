@@ -25,8 +25,14 @@ static void bench_memcpy(size_t size, FILE *out)
 	size_t new_size = size * 2;
 	struct timespec s, e;
 	
-	clock_gettime(CLOCK_MONOTONIC, &s);
 	char *new_ptr = malloc(new_size);
+
+	if (!new_ptr) {
+		perror("malloc");
+		return;
+	}
+
+	clock_gettime(CLOCK_MONOTONIC, &s);
 	memcpy(new_ptr, ptr, size);
 	clock_gettime(CLOCK_MONOTONIC, &e);
 
