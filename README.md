@@ -45,15 +45,6 @@ Fairness safeguards:
 
 ---
 
-## Build & run
-
-```bash
-gcc -O2 -Wall -std=c11 bench_pte_vs_memcpy_en.c -o bench
-./bench          # writes result.csv
-```
-
----
-
 ## Environment
 
 - Hardware
