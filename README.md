@@ -1,3 +1,5 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/minseok127/vec-remap-bench)
+
 # PTE-Move vs. Memory-Copy Benchmark
 
 This micro-benchmark measures the latency difference between
